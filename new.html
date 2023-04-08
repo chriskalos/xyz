@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Y2K Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    body {
+        font-family: 'VT323', monospace;
+        background-color: #00ffff;
+        color: #ff00ff;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .name {
+        font-size: 48px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 50px;
+    }
+
+    .social-links a {
+        font-size: 24px;
+        text-decoration: none;
+        color: #ff00ff;
+        text-shadow: 1px 1px 0px #00ffff;
+        transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+        color: #00ffff;
+        text-shadow: 1px 1px 0px #ff00ff;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="name">John Doe</h1>
+        <div class="social-links">
+            <a href="https://twitter.com/" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>
