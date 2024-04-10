@@ -1,0 +1,55 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for the content */
+.container {
+    text-align: center;
+    border-radius: 20px;
+    padding: 40px;
+    background: #e0e5ec;
+    box-shadow:  20px 20px 60px #bebec3, 
+                -20px -20px 60px #ffffff;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Styling for the list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 20px;
+}
+
+/* Neumorphic button styles */
+.neu-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 200px; /* Fixed width for all buttons */
+    text-align: center; /* Centers text in the button */
+    border-radius: 50px;
+    background: #e0e5ec;
+    color: #333;
+    font-size: 18px;
+    box-shadow: 8px 8px 15px #a7a9ac,
+                -8px -8px 15px #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.neu-button:hover {
+    background-color: #cbd1d8;
+    box-shadow: none;
+}
