@@ -1,6 +1,10 @@
+@font-face {
+    font-family: "Jost Medium";
+    src: url("font/Jost-Medium.ttf");
+}
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Jost';
     background-color: #e0e5ec;
     display: flex;
     justify-content: center;
