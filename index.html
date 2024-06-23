@@ -256,13 +256,13 @@
             }
         }
 
-        // Ensure buttons are clickable on touch devices
-        const buttons = document.querySelectorAll('.btn-wacky');
-        buttons.forEach(button => {
-            button.addEventListener('touchend', function(e) {
+        // Ensure links are clickable on touch devices
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('touchend', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.href = button.getAttribute('href');
+                window.location.href = link.getAttribute('href');
             });
         });
 
