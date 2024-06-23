@@ -6,9 +6,13 @@
     <title>Wacky E-Shop</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: "Integrated Comic Sans";
+            src: url("font/comic-sans.woff");
+        }
         body {
             background: url('img/textures/wood.jpg') repeat;
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            font-family: "Comic Sans MS", "Comic Sans", "Integrated Comic Sans";
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -166,6 +170,7 @@
         function dragElement(elmnt) {
             var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
             elmnt.onmousedown = dragMouseDown;
+            elmnt.ontouchstart = dragTouchStart;
 
             function dragMouseDown(e) {
                 e = e || window.event;
@@ -174,6 +179,15 @@
                 pos4 = e.clientY;
                 document.onmouseup = closeDragElement;
                 document.onmousemove = elementDrag;
+            }
+
+            function dragTouchStart(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.touches[0].clientX;
+                pos4 = e.touches[0].clientY;
+                document.ontouchend = closeDragElement;
+                document.ontouchmove = elementTouchDrag;
             }
 
             function elementDrag(e) {
@@ -187,9 +201,22 @@
                 elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
             }
 
+            function elementTouchDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.touches[0].clientX;
+                pos2 = pos4 - e.touches[0].clientY;
+                pos3 = e.touches[0].clientX;
+                pos4 = e.touches[0].clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
             function closeDragElement() {
                 document.onmouseup = null;
                 document.onmousemove = null;
+                document.ontouchend = null;
+                document.ontouchmove = null;
             }
         }
 
