@@ -252,6 +252,16 @@
             }
         }
 
+        // Ensure buttons are clickable on touch devices
+        const buttons = document.querySelectorAll('.btn-wacky');
+        buttons.forEach(button => {
+            button.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = button.getAttribute('href');
+            });
+        });
+
         // Increase shake speed, distance, and size on hover
         products.forEach(product => {
             let animationSpeed = 1; // initial speed in seconds
