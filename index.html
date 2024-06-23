@@ -3,28 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalos Likes Computers</title>
-    <meta name="Description" content="Kalos Likes Computers links">
-    <meta property='og:title' content="Kalos Likes Computers"/>
-    <meta property='og:image' content="https://raw.githubusercontent.com/chriskalos/xyz/main/meta/klc_screenshot.jpeg"/>
-    <meta property='og:description' content='Kalos Likes Computers links'/>
-    <meta property='og:url' content='chriskalos.xyz'/>
-    <meta property='og:image:width' content='3360' />
-    <meta property='og:image:height' content='2100' />
-    <meta property="og:type" content='website'/>
-    <link rel="stylesheet" href="revampedstyles.css">
+    <title>Wacky E-Shop</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('img/textures/wood.jpg') repeat;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .floating-menu {
+            background-color: #ff66cc;
+            border: 3px solid #000;
+            padding: 10px;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            cursor: move;
+            z-index: 1000;
+        }
+        .floating-menu a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 4em;
+            color: #00ffff;
+            text-shadow: 2px 2px #ff0000;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+        .product {
+            background-color: #00ff00;
+            margin: 0;
+            padding: 20px;
+            position: absolute;
+            transform: rotate(-10deg) scale(1);
+            width: 300px;
+            height: 300px;
+            z-index: 1;
+            animation: shake 1s infinite;
+            --shake-multiplier: 1;
+            --scale-multiplier: 1;
+        }
+        .btn-wacky {
+            background-color: #4287f5;
+            color: #00ff00;
+            font-weight: bold;
+            border: 2px solid #00ffff;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .animated-text {
+            font-size: 3em;
+            animation: colorchange 2s infinite;
+        }
+        @keyframes colorchange {
+            0% { color: red; }
+            25% { color: yellow; }
+            50% { color: green; }
+            75% { color: blue; }
+            100% { color: red; }
+        }
+        @keyframes shake {
+            0% { transform: translate(calc(1px * var(--shake-multiplier)), calc(1px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(0deg); }
+            10% { transform: translate(calc(-1px * var(--shake-multiplier)), calc(-2px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(-1deg); }
+            20% { transform: translate(calc(-3px * var(--shake-multiplier)), 0px) scale(var(--scale-multiplier)) rotate(1deg); }
+            30% { transform: translate(calc(3px * var(--shake-multiplier)), calc(2px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(0deg); }
+            40% { transform: translate(calc(1px * var(--shake-multiplier)), calc(-1px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(1deg); }
+            50% { transform: translate(calc(-1px * var(--shake-multiplier)), calc(2px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(-1deg); }
+            60% { transform: translate(calc(-3px * var(--shake-multiplier)), calc(1px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(0deg); }
+            70% { transform: translate(calc(3px * var(--shake-multiplier)), calc(1px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(-1deg); }
+            80% { transform: translate(calc(-1px * var(--shake-multiplier)), calc(-1px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(1deg); }
+            90% { transform: translate(calc(1px * var(--shake-multiplier)), calc(2px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(0deg); }
+            100% { transform: translate(calc(1px * var(--shake-multiplier)), calc(-2px * var(--shake-multiplier))) scale(var(--scale-multiplier)) rotate(-1deg); }
+        }
+        .container-fluid {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .info-text {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #aaa;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            font-size: 1.5em;
+            text-align: center;
+            z-index: 1001;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Kalos Likes Computers</h1>
-    </br>
-        <ul>
-            <li><a href="https://youtube.com/@KalosLikesComputers" class="neu-button">YouTube</a></li>
-            <li><a href="https://threads.net/@KalosLikesComputers" class="neu-button">Threads</a></li>
-            <li><a href="https://instagram.com/@KalosLikesComputers" class="neu-button">Instagram</a></li>
-            <li><a href="https://discord.gg/HN73Tp93S4" class="neu-button">Discord</a></li>
-            <li><a href="old.html" class="neu-button">Personal Page</a></li>
-        </ul>
+    <div class="info-text"><p>try dragging stuff around. trust me, i'm an influencer.</p></div>
+
+    <div class="floating-menu" id="menu">
+        <a href="#">this is supposed to be</a>
+        <a href="#">a navigation menu but there's</a>
+        <a href="#">nothing to navigate to</a>
+        <a href="https://open.spotify.com/artist/53yEaKLdVo0cDRFGOZj6Td" target="_blank">except this one i guess</a>
     </div>
+
+    <h1 class="animated-text" id="home"><p>buy one now, get one for free!</p></h1>
+
+    <div class="container-fluid" id="products">
+        <div class="row">
+            <div class="col-md-4 product" style="--shake-multiplier: 1; --scale-multiplier: 1;" id="product1">
+                <h2>youtube</h2>
+                <p>hey gais it's chriskalos here and i run a youtuibe channel called kalos likes computers it's pretty cool please checki it out or i will starve to death probably! hahahhadfsh</p>
+                <a href="https://youtube.com/@KalosLikesComputers" target="_blank" class="btn btn-wacky">watch my video s   p leassee </a>
+            </div>
+            <div class="col-md-4 product" style="--shake-multiplier: 1; --scale-multiplier: 1;" id="product2">
+                <h2>threads</h2>
+                <p>i dont like twitter</p>
+                <a href="https://threads.net/@KalosLikesComputers" target="_blank" class="btn btn-wacky">screw elon musk</a>
+            </div>
+            <div class="col-md-4 product" style="--shake-multiplier: 1; --scale-multiplier: 1;" id="product3">
+                <h2>instagram</h2>
+                <p>wouldn't it be cool if you had a pet ram and you named it instag so it would be instag ram</p>
+                <a href="https://instagram.com/@KalosLikesComputers" target="_blank" class="btn btn-wacky">it would be a happy ram</a>
+            </div>
+            <div class="col-md-4 product" style="--shake-multiplier: 1; --scale-multiplier: 1;" id="product4">
+                <h2>discord</h2>
+                <p>ok so i actually care about this one it's my discord server and it's cool i liek it please joinm!!</p>
+                <a href="https://discord.gg/HN73Tp93S4" target="_blank" class="btn btn-wacky">join the discord server for clear skin and good grades and stan kalos</a>
+            </div>
+            <div class="col-md-4 product" style="--shake-multiplier: 1; --scale-multiplier: 1;" id="product5">
+                <h2>personal page</h2>
+                <p>I am a serious professional.</p>
+                <a href="old.html" class="btn btn-wacky">Visit my professional page.</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        // Make the floating menu draggable
+        dragElement(document.getElementById("menu"));
+        const products = document.querySelectorAll('.product');
+        products.forEach(product => {
+            const randomTop = Math.random() * 80; // Random top position between 0% and 80%
+            const randomLeft = Math.random() * 80; // Random left position between 0% and 80%
+            product.style.top = `${randomTop}%`;
+            product.style.left = `${randomLeft}%`;
+            dragElement(product);
+        });
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+        // Increase shake speed, distance, and size on hover
+        products.forEach(product => {
+            let animationSpeed = 0.5; // initial speed in seconds
+            const minAnimationSpeed = 0.05; // minimum speed in seconds
+            let shakeMultiplier = 1; // initial shake multiplier
+            let scaleMultiplier = 1; // initial scale multiplier
+            let requestId;
+
+            function increaseShake() {
+                if (animationSpeed > minAnimationSpeed) {
+                    animationSpeed -= 0.01; // increase speed
+                } else {
+                    animationSpeed = minAnimationSpeed;
+                }
+                shakeMultiplier += 0.05; // increase shake multiplier
+                scaleMultiplier += 0.001; // increase scale multiplier
+                product.style.setProperty('--shake-multiplier', shakeMultiplier);
+                product.style.setProperty('--scale-multiplier', scaleMultiplier);
+                product.style.animationDuration = animationSpeed + 's';
+                requestId = requestAnimationFrame(increaseShake);
+            }
+
+            product.addEventListener('mouseover', () => {
+                requestId = requestAnimationFrame(increaseShake);
+            });
+
+            product.addEventListener('mouseout', () => {
+                cancelAnimationFrame(requestId);
+                animationSpeed = 0.5;
+                shakeMultiplier = 1;
+                scaleMultiplier = 1;
+                product.style.setProperty('--shake-multiplier', shakeMultiplier);
+                product.style.setProperty('--scale-multiplier', scaleMultiplier);
+                product.style.animationDuration = animationSpeed + 's';
+            });
+        });
+    </script>
 </body>
 </html>
