@@ -233,7 +233,7 @@
 
         // Increase shake speed, distance, and size on hover
         products.forEach(product => {
-            let animationSpeed = 0.5; // initial speed in seconds
+            let animationSpeed = 1; // initial speed in seconds
             const minAnimationSpeed = 0.05; // minimum speed in seconds
             let shakeMultiplier = 1; // initial shake multiplier
             let scaleMultiplier = 1; // initial scale multiplier
@@ -259,7 +259,7 @@
 
             product.addEventListener('mouseout', () => {
                 cancelAnimationFrame(requestId);
-                animationSpeed = 0.5;
+                animationSpeed = 1;
                 shakeMultiplier = 1;
                 scaleMultiplier = 1;
                 product.style.setProperty('--shake-multiplier', shakeMultiplier);
