@@ -1,5 +1,6 @@
 # chriskalos.xyz
 ## This is not polished at all but it's for my personal use only so, sorry
+### Feel free to contribute if you want idk lol
 
 Walkthrough of HTML files:
 - aprilfools2022.html: It's what it says it is
