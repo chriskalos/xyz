@@ -103,10 +103,21 @@
             left: 50%;
             transform: translateX(-50%);
             color: #aaa;
-            font-family: 'Comic Sans MS', 'Comic Sans', "Integrated Comic Sans";
+            font-family: "Comic Sans MS", "Comic Sans", "Integrated Comic Sans";
             font-size: 1.5em;
             text-align: center;
             z-index: 1001;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: 150px;
+                height: 150px;
+                font-size: 0.8em;
+            }
+            .btn-wacky {
+                font-size: 0.7em;
+            }
         }
     </style>
 </head>
