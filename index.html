@@ -30,7 +30,7 @@
         .floating-menu a {
             color: #fff;
             font-weight: bold;
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-transform: uppercase;
             display: block;
             margin-bottom: 10px;
@@ -49,21 +49,31 @@
         .product {
             background-color: #00ff00;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             position: absolute;
             transform: rotate(-10deg) scale(1);
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             z-index: 1;
             animation: shake 1s infinite;
             --shake-multiplier: 1;
             --scale-multiplier: 1;
+        }
+        .product h2 {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+        }
+        .product p {
+            font-size: 0.9em;
+            margin: 0 0 20px 0;
         }
         .btn-wacky {
             background-color: #4287f5;
             color: #00ff00;
             font-weight: bold;
             border: 2px solid #00ffff;
+            font-size: 0.8em;
+            padding: 5px 10px;
             position: absolute;
             bottom: 10px;
             right: 10px;
@@ -104,7 +114,7 @@
             transform: translateX(-50%);
             color: #aaa;
             font-family: "Comic Sans MS", "Comic Sans", "Integrated Comic Sans";
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-align: center;
             z-index: 1001;
         }
@@ -115,8 +125,15 @@
                 height: 150px;
                 font-size: 0.8em;
             }
-            .btn-wacky {
+            .product h2 {
+                font-size: 1em;
+            }
+            .product p {
                 font-size: 0.7em;
+            }
+            .btn-wacky {
+                font-size: 0.6em;
+                padding: 3px 5px;
             }
             .floating-menu {
                 font-size: 0.7em;
@@ -126,7 +143,7 @@
                 font-size: 1em;
             }
             .info-text {
-                font-size: 1em;
+                font-size: 0.8em;
             }
             h1 {
                 font-size: 2em;
